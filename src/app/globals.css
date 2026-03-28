@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #442a22;
+  --primary-container: #5d4037;
+  --on-primary: #ffffff;
+  --secondary: #904c31;
+  --secondary-container: #fda685;
+  --tertiary: #30330f;
+  --tertiary-container: #464923;
+  --surface: #fff9eb;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f9f3e5;
+  --surface-container: #f3eddf;
+  --surface-container-high: #eee8da;
+  --surface-container-highest: #e8e2d4;
+  --surface-dim: #dfdacc;
+  --surface-tint: #77574d;
+  --on-surface: #1d1c13;
+  --on-surface-variant: #504441;
+  --outline: #827470;
+  --outline-variant: #d4c3be;
+  --foreground: #1d1c13;
+  --foreground-muted: #504441;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-surface: var(--surface);
+  --color-surface-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-high: var(--surface-container-high);
+  --color-surface-highest: var(--surface-container-highest);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-tint: var(--surface-tint);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--surface);
+  color: var(--on-surface);
 }

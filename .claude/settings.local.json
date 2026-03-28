@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__magic__21st_magic_component_builder",
+      "Read(//c/Users/User/Desktop/**)",
+      "Bash(npx next:*)",
+      "mcp__stitch__list_screens",
+      "mcp__stitch__list_projects",
+      "mcp__stitch__get_screen",
+      "WebFetch(domain:contribution.usercontent.google.com)",
+      "Bash(curl -v -sL \"https://lh3.googleusercontent.com/aida/ADBb0ugR2FMLMjwAmfmF3FMc_JrJwD9ycH4qKfKOCf4E2BxcOSZ1qoypsrtuEWDxVeePuLxoYbzrSKES9t93yV-rFTTqdtdg8CXhTGJ3ssM94V1jhG2F3MBSD1EMAJZq5MfwmAVFDjAoU3yleRkjnCFN3TRRK1CqshkdLfAPyKPjWG057zgfigJMh1TV6HqW84UlBx5XaTYyxZtbysrApihab5MhNeQQaI4l40Px13bxSBRH5eqkdGFWYOs49OEM\" -o \"/c/Users/User/Desktop/Barni''''s corner/mockup-screenshot.png\")"
+    ]
+  }
+}
