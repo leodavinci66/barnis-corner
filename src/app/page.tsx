@@ -5,7 +5,6 @@ import Menu from "@/components/Menu";
 import Gallery from "@/components/Gallery";
 import Visit from "@/components/Visit";
 import Footer from "@/components/Footer";
-import Fab from "@/components/Fab";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
         <Visit />
       </main>
       <Footer />
-      <Fab />
     </>
   );
 }
