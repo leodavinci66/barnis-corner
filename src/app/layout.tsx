@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${notoSerif.variable} ${plusJakarta.variable} h-full antialiased`}
+      className={`dark ${notoSerif.variable} ${plusJakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-[family-name:var(--font-body)]">
+      <body className="min-h-full flex flex-col font-[family-name:var(--font-body)] bg-background text-on-surface">
         {children}
       </body>
     </html>

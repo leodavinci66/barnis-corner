@@ -1,48 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #442a22;
-  --primary-container: #5d4037;
-  --on-primary: #ffffff;
-  --secondary: #904c31;
-  --secondary-container: #fda685;
-  --tertiary: #30330f;
-  --tertiary-container: #464923;
-  --surface: #fff9eb;
-  --surface-container-lowest: #ffffff;
-  --surface-container-low: #f9f3e5;
-  --surface-container: #f3eddf;
-  --surface-container-high: #eee8da;
-  --surface-container-highest: #e8e2d4;
-  --surface-dim: #dfdacc;
-  --surface-tint: #77574d;
-  --on-surface: #1d1c13;
-  --on-surface-variant: #504441;
-  --outline: #827470;
-  --outline-variant: #d4c3be;
-  --foreground: #1d1c13;
-  --foreground-muted: #504441;
+  --primary: #cee28e;
+  --on-primary: #1a1c13;
+  --background: #1a1c1e;
+  --surface: #1a1c1e;
+  --on-surface: #e2e2e6;
+  --surface-container: #2f3033;
+  --surface-container-low: #1d1c13;
+  --surface-container-high: #282a2f;
+  --surface-container-highest: #33353a;
+  --outline: #909094;
+  --secondary: #cee28e;
+  --on-secondary: #1a1c13;
+  --secondary-container: #43483e;
+  --on-secondary-container: #cee28e;
+  --tertiary: #cee28e;
+  --on-tertiary: #1a1c13;
+  --foreground: #e2e2e6;
+  --foreground-muted: #909094;
 }
 
 @theme inline {
   --color-primary: var(--primary);
-  --color-primary-container: var(--primary-container);
   --color-on-primary: var(--on-primary);
-  --color-secondary: var(--secondary);
-  --color-secondary-container: var(--secondary-container);
-  --color-tertiary: var(--tertiary);
-  --color-tertiary-container: var(--tertiary-container);
+  --color-background: var(--background);
   --color-surface: var(--surface);
-  --color-surface-low: var(--surface-container-low);
+  --color-on-surface: var(--on-surface);
   --color-surface-container: var(--surface-container);
+  --color-surface-low: var(--surface-container-low);
   --color-surface-high: var(--surface-container-high);
   --color-surface-highest: var(--surface-container-highest);
-  --color-surface-dim: var(--surface-dim);
-  --color-surface-tint: var(--surface-tint);
-  --color-on-surface: var(--on-surface);
-  --color-on-surface-variant: var(--on-surface-variant);
   --color-outline: var(--outline);
-  --color-outline-variant: var(--outline-variant);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
 }
@@ -52,6 +47,6 @@ html {
 }
 
 body {
-  background: var(--surface);
+  background: var(--background);
   color: var(--on-surface);
 }

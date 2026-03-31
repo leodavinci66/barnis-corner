@@ -1,17 +1,37 @@
 export default function Footer() {
   return (
-    <footer className="bg-primary text-on-primary/80 py-10 px-6 md:px-8">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
-        <p className="font-[family-name:var(--font-heading)] font-semibold text-lg text-on-primary">
+    <footer className="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-outline/10 bg-surface-container transition-all">
+      <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
+        <div className="text-xl font-[family-name:var(--font-heading)] font-bold text-primary mb-2">
           Barni&apos;s Corner
-        </p>
-        <div className="text-center space-y-1">
-          <p>Herzog-Leopold-Straße 2, 2700 Wiener Neustadt</p>
-          <p>+43 667 654 74399</p>
         </div>
-        <p className="text-on-primary/60 text-xs">
+        <p className="text-xs text-on-surface/60 text-center md:text-left leading-relaxed">
           &copy; 2026 Barni&apos;s Corner. Mit Liebe gebraut.
+          <br />
+          +43 667 654 74399
+          <br />
+          Herzog-Leopold-Strasse 2, 2700 Wiener Neustadt
         </p>
+      </div>
+      <div className="flex gap-8">
+        <a
+          className="text-xs font-bold uppercase tracking-widest text-on-surface/60 hover:text-primary transition-colors"
+          href="#"
+        >
+          Impressum
+        </a>
+        <a
+          className="text-xs font-bold uppercase tracking-widest text-on-surface/60 hover:text-primary transition-colors"
+          href="#"
+        >
+          Datenschutz
+        </a>
+        <a
+          className="text-xs font-bold uppercase tracking-widest text-on-surface/60 hover:text-primary transition-colors"
+          href="#"
+        >
+          Jobs
+        </a>
       </div>
     </footer>
   );

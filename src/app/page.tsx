@@ -4,22 +4,22 @@ import About from "@/components/About";
 import Menu from "@/components/Menu";
 import Gallery from "@/components/Gallery";
 import Visit from "@/components/Visit";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Fab from "@/components/Fab";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="pt-24">
         <Hero />
         <About />
         <Menu />
         <Gallery />
         <Visit />
-        <Contact />
       </main>
       <Footer />
+      <Fab />
     </>
   );
 }

@@ -15,85 +15,94 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex items-end md:items-center pt-14 bg-surface-container"
+      className="relative min-h-[85vh] flex items-center px-8 md:px-20 pt-20 overflow-hidden"
     >
-      {/* Background image placeholder — warm cafe interior */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-container/40 via-surface-tint/20 to-surface/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
+      <div className="z-10 max-w-2xl">
+        <motion.span
+          custom={0}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block"
+        >
+          Est. 2026
+        </motion.span>
+
+        <motion.h1
+          custom={1}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="font-[family-name:var(--font-heading)] text-6xl md:text-8xl text-on-surface font-bold leading-tight mb-6"
+        >
+          Barni&apos;s
+          <br />
+          Corner
+        </motion.h1>
+
+        <motion.p
+          custom={2}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="text-xl text-on-surface/80 mb-8 max-w-lg leading-relaxed"
+        >
+          Ihre gemütliche Ecke in der Nachbarschaft. Wir brauen Momente der
+          Ruhe in jeder Tasse.
+        </motion.p>
+
+        {/* Feature badges */}
+        <motion.div
+          custom={3}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col gap-4 mb-10"
+        >
+          <div className="flex items-center gap-3 text-on-surface bg-surface-high self-start px-5 py-3 rounded-lg border border-outline/10">
+            <span className="text-primary text-lg">&#9733;</span>
+            <span className="font-semibold">Toller Ort zum Lernen</span>
+          </div>
+          <div className="flex items-center gap-3 text-on-primary bg-primary self-start px-5 py-3 rounded-lg">
+            <span>&#127891;</span>
+            <span className="font-bold">20% Studentenrabatt</span>
+          </div>
+        </motion.div>
+
+        <motion.p
+          custom={4}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="text-xs text-primary font-bold uppercase tracking-[0.2em] mb-10 italic"
+        >
+          3 herzen, 1 vision; together we build our next chapter
+        </motion.p>
+
+        <motion.div
+          custom={5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
+          <a
+            href="#visit"
+            className="inline-flex items-center justify-center bg-primary text-on-primary px-10 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition-colors"
+          >
+            Besuchen Sie uns
+          </a>
+        </motion.div>
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-8 py-16 md:py-24">
-        <div className="max-w-xl">
-          {/* Est. label */}
-          <motion.p
-            custom={0}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="text-sm text-on-surface-variant tracking-widest uppercase font-[family-name:var(--font-body)] mb-4"
-          >
-            Est. 2026
-          </motion.p>
-
-          {/* Headline */}
-          <motion.h1
-            custom={1}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="font-[family-name:var(--font-heading)] font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.1] text-on-surface"
-          >
-            Barni&apos;s
-            <br />
-            Corner
-          </motion.h1>
-
-          {/* Tagline */}
-          <motion.p
-            custom={2}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="mt-6 text-on-surface-variant text-base sm:text-lg max-w-md leading-relaxed"
-          >
-            Ihre gemütliche Ecke in der Nachbarschaft. Wir brauen Momente der
-            Ruhe in jeder Tasse.
-          </motion.p>
-
-          {/* Feature badges */}
-          <motion.div
-            custom={3}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="mt-8 flex flex-wrap gap-3"
-          >
-            <span className="inline-flex items-center gap-2 bg-surface-high/80 backdrop-blur-sm text-on-surface-variant text-sm px-4 py-2.5 rounded-lg">
-              <span className="text-secondary">&#9733;</span>
-              Toller Ort zum Lernen
-            </span>
-            <span className="inline-flex items-center gap-2 bg-secondary-container text-primary font-semibold text-sm px-4 py-2.5 rounded-lg">
-              <span>&#127891;</span>
-              20% Studentenrabatt
-            </span>
-          </motion.div>
-
-          {/* CTA */}
-          <motion.div
-            custom={4}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="mt-8"
-          >
-            <a
-              href="#menu"
-              className="inline-flex items-center justify-center px-7 py-3.5 bg-primary hover:bg-primary-container text-on-primary font-medium rounded-full transition-colors text-sm"
-            >
-              Speisekarte entdecken
-            </a>
-          </motion.div>
+      {/* Hero image — right half */}
+      <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block p-12">
+        <div className="relative w-full h-full">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="w-full h-full object-cover rounded-lg shadow-2xl brightness-75 grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB31UwszCWLASH0ColrFtQrye6zyYhH7Jgs_AZgA0XJ9YJ19SewBZHT4ndZWQlxtVyLYEyOWjvUCwPGCUWjfnY7gUxvjuaBXlVnzCT3tFCgC7TyWwEAbkO5DkLdPvJfb26__wHCiixkXv_8pglPODXW7UfG63G8eLG1Rk5CrreYxOFco6yHpHWWYXbx33n-ZNkzzzZbb4rlbsnyBh58O1oGS2lbCVEizkZn8hLb145QTkETD9Ai1k-lN3dBzuiT_EaSUquuA008L31J"
+            alt="A cozy latte in a rustic ceramic mug on a weathered wooden table with warm morning sunlight"
+          />
         </div>
       </div>
     </section>

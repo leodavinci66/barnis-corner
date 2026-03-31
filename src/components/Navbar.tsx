@@ -14,29 +14,46 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl">
-      <div className="max-w-6xl mx-auto px-6 md:px-8 flex items-center justify-between h-14 md:h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline/20">
+      <div className="w-full px-8 flex items-center justify-between h-16 md:h-20">
         <a
           href="#hero"
-          className="font-[family-name:var(--font-heading)] font-semibold text-lg text-primary"
+          className="font-[family-name:var(--font-heading)] font-bold text-2xl text-primary"
         >
           Barni&apos;s Corner
         </a>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
+          {links.map((link, i) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-on-surface-variant hover:text-primary transition-colors font-[family-name:var(--font-body)]"
+              className={`font-medium text-sm tracking-tight transition-colors duration-300 ${
+                i === 0
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-on-surface hover:text-primary"
+              }`}
             >
               {link.label}
             </a>
           ))}
-          <span className="text-xs text-outline font-medium tracking-wider">
-            DE / EN
-          </span>
+        </div>
+
+        <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider">
+            <span className="text-primary cursor-default">DE</span>
+            <span className="opacity-40">/</span>
+            <a className="text-on-surface/60 hover:text-primary transition-colors" href="#">
+              EN
+            </a>
+          </div>
+          <a
+            href="#visit"
+            className="bg-primary text-on-primary px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all"
+          >
+            Besuchen Sie uns
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -68,19 +85,26 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-surface/95 backdrop-blur-xl"
+            className="md:hidden overflow-hidden bg-background/95 backdrop-blur-xl"
           >
-            <div className="flex flex-col px-6 py-5 gap-4">
+            <div className="flex flex-col px-8 py-5 gap-4">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-on-surface-variant hover:text-primary transition-colors"
+                  className="text-on-surface hover:text-primary transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
+              <a
+                href="#visit"
+                onClick={() => setOpen(false)}
+                className="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold text-center mt-2"
+              >
+                Besuchen Sie uns
+              </a>
             </div>
           </motion.div>
         )}
